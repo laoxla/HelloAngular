@@ -1,0 +1,27 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="HelloAngular">
+<head>
+    <title></title>
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/ngApp/app.js"></script>
+</head>
+
+<body>
+    <div ng-controller="HomeController as controller">
+
+        <input ng-model="peanutButter" />
+        Hello {{peanutButter}}! <br />
+
+        {{controller.message}}
+
+      @*//  {{controller}}*@
+
+        <button ng-click="controller.update()">Click it!</button>
+
+        <ul>
+            <li style="color: {{color}};" ng-repeat="color in controller.colors">{{color}}</li>
+
+        </ul>
+    </div>
+</body>
+</html>
